@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JSON Maker</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="input-wrapper">
+
+            <form action="">
+                <label for="scots">Scots:</label>
+                <input type="text" id="scots" name="scots"><br>
+
+                <label for="english">English:</label>
+                <input type="text" id="english" name="english"><br>
+
+                <label for="definition">Definition:</label>
+                <input type="text" id="definition" name="definition"><br>
+
+                <label for="pos">PoS:</label>
+                <input type="text" id="pos" name="pos" required><br>
+
+                <label for="search-input">Search Inputs:</label>
+                <input type="text" id="search-input1" name="search-input1">
+                <input type="text" id="search-input2" name="search-input2">
+                <input type="text" id="search-input3" name="search-input3">
+                <input type="text" id="search-input4" name="search-input4">
+                <input type="text" id="search-input5" name="search-input5">
+                <input type="text" id="search-input6" name="search-input6">
+                <input type="text" id="search-input7" name="search-input7">
+                <input type="text" id="search-input8" name="search-input8">
+                <input type="text" id="search-input9" name="search-input9">
+                <input type="text" id="search-input10" name="search-input10"><br><br>
+            </form>
+            <div id="button-section">
+                <button onclick="addToJSON()">Submit</button>
+                <button onclick="finished()">Finish</button>
+                <div id="notification">test</div>
+            </div>
+        </div>
+        <div class="output-wrapper">
+            <div id="output-box"></div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            <script>
+                const thisYear = new Date().getFullYear();
+                if (thisYear === 2023) {
+                    document.write(`Copyright © 2023 `);
+                } else {
+                    document.write(`Copyright © 2023-${thisYear} `);
+                }
+            </script>
+            <a href="https://github.com/mjbrechner">M.J. Brechner</a>
+        </p>
+        <p>Created for use in creating the JSON file</p>
+        <p>for the <a href="https://github.com/mjbrechner/scots-english">Scots-English dictionary</a> project</p>
+    </footer>
+    <script src="javascript/index.js" defer></script>
+</body>
+
+</html>
