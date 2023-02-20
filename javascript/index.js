@@ -66,7 +66,11 @@ let x;
 
     console.log(`totalOutput: ${totalOutput}`);
 
-    // Restart
+    // Reset Notification
+    document.getElementById("notification").innerText = `${scotsInput.toUpperCase()} entry submitted`;
+    setTimeout(clearNotification, 3000);
+
+    // Reset--START
     scotsInput = document.getElementById("scots").value = "";
     englishInput = document.getElementById("english").value = "";
     definitionInput = document.getElementById("definition").value = "";
@@ -81,11 +85,9 @@ let x;
     searchInput8 = document.getElementById("search-input8").value = "";
     searchInput9 = document.getElementById("search-input9").value = "";
     searchInput10 = document.getElementById("search-input10").value = "";
-    // Restart
 
-    // Notification
-    document.getElementById("notification").innerText = `Entry submitted`;
-    setTimeout(clearNotification, 1500);
+    document.getElementById("scots").focus();
+    // Reset--END
 }
 
 function finished() {
@@ -95,6 +97,6 @@ function finished() {
     navigator.clipboard.writeText(finalOutput);
 
     // Notification
-    document.getElementById("notification").innerText = `Copied to clipboard`;
-    setTimeout(clearNotification, 1500);
+    document.getElementById("notification").innerText = `copied to clipboard`;
+    setTimeout(clearNotification, 3000);
 }
