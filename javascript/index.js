@@ -10,7 +10,7 @@ if (typeof totalOutput !== "undefined") {
 
 // Funtion to clear notification
 function clearNotification() {
-document.getElementById("notification").innerText = ``;
+    document.getElementById("notification").innerText = ``;
 }
 
 function addToJSON() {
@@ -28,16 +28,21 @@ function addToJSON() {
     let searchInput8 = document.getElementById("search-input8").value.trim();
     let searchInput9 = document.getElementById("search-input9").value.trim();
     let searchInput10 = document.getElementById("search-input10").value.trim();
+    let searchInput11 = document.getElementById("search-input11").value.trim();
+    let searchInput12 = document.getElementById("search-input12").value.trim();
+    let searchInput13 = document.getElementById("search-input13").value.trim();
+    let searchInput14 = document.getElementById("search-input14").value.trim();
+    let searchInput15 = document.getElementById("search-input15").value.trim();
 
-// If no definition, use English word + period
-if (definitionInput === "") {
-    definitionInput = `${englishInput}.`;
-}
+    // If no definition, use English word + period
+    if (definitionInput === "") {
+        definitionInput = `${englishInput}.`;
+    }
 
     let howManySearchInputs = 0;
     let searchInputArray = [];
 
-    for (let i = 1; i < 11; i++) {
+    for (let i = 1; i < 16; i++) {
 
         // let searchInputCheck = `document.getElementById("search-input${i}").value.trim()`;
         let searchInputData = eval(`document.getElementById("search-input${i}").value.trim()`);
@@ -50,11 +55,11 @@ if (definitionInput === "") {
 
         console.log(`how many search inputs: ${howManySearchInputs}. Search Input array: ${searchInputArray}`);
     }
-let x;
+    let x;
     if (howManySearchInputs === 0) {
-         x = `\{\"searchInput\":\[\"${scotsInput}\",\"${englishInput}\"\]\,\"scots\":\"${scotsInput}\"\,\"english\":\"${englishInput}\"\,\"definition\":\"${definitionInput}\"\,\"pos\":\"${posInput}\"\}\,`;
+        x = `\{\"searchInput\":\[\"${scotsInput}\",\"${englishInput}\"\]\,\"scots\":\"${scotsInput}\"\,\"english\":\"${englishInput}\"\,\"definition\":\"${definitionInput}\"\,\"pos\":\"${posInput}\"\}\,`;
     } else {
-         x = `\{\"searchInput\":\[\"${scotsInput}\",\"${englishInput}\",${searchInputArray}\]\,\"scots\":\"${scotsInput}\"\,\"english\":\"${englishInput}\"\,\"definition\":\"${definitionInput}\"\,\"pos\":\"${posInput}\"\}\,`;
+        x = `\{\"searchInput\":\[\"${scotsInput}\",\"${englishInput}\",${searchInputArray}\]\,\"scots\":\"${scotsInput}\"\,\"english\":\"${englishInput}\"\,\"definition\":\"${definitionInput}\"\,\"pos\":\"${posInput}\"\}\,`;
     }
 
     if (typeof totalOutput === "undefined") {
@@ -85,7 +90,11 @@ let x;
     searchInput8 = document.getElementById("search-input8").value = "";
     searchInput9 = document.getElementById("search-input9").value = "";
     searchInput10 = document.getElementById("search-input10").value = "";
-
+    searchInput11 = document.getElementById("search-input11").value = "";
+    searchInput12 = document.getElementById("search-input12").value = "";
+    searchInput13 = document.getElementById("search-input13").value = "";
+    searchInput14 = document.getElementById("search-input14").value = "";
+    searchInput15 = document.getElementById("search-input15").value = "";
     document.getElementById("scots").focus();
     // Reset--END
 }
